@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>🎲 Roulette dApp</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+    <h1>🎲 Roulette dApp</h1>
+
+    <!-- Wallet connection -->
+    <button id="connectBtn">Connect Wallet</button>
+    <p id="walletAddress">Not connected</p>
+
+    <!-- Place a bet -->
+    <h2>Place a Bet</h2>
+    <form id="betForm">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="number" id="number" placeholder="Number (0–36)" min="0" max="36" required />
+        <input type="number" id="amount" placeholder="Amount (ETH)" step="0.01" required />
+        <button id="placeBet" type="submit">Place Bet</button>
+    </form>
+
+    <!-- Local testing helpers -->
+    <h2>Testing (Localhost)</h2>
+    <button id="fulfillBtn">Fulfill VRF (mock)</button>
+
+    <!-- Game log -->
+    <h2>Game Log</h2>
+    <div id="log"></div>
+</div>
+
+<!-- Load app.js -->
+<script type="module" src="app.js"></script>
+</body>
+</html>
